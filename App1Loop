@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class App1Loop {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        while (true) {
+            System.out.println("Menu:");
+            System.out.println("1. Inserir notas");
+            System.out.println("2. Calcular média");
+            System.out.println("3. Sair");
+            System.out.print("Escolha uma opção: ");
+
+            int opcao = sc.nextInt();
+
+            switch (opcao) {
+                case 1:
+                    // Inserir notas
+                    System.out.println("Inserir notas");
+                    break;
+
+                case 2:
+                    // Calcular média
+                    System.out.println("Calcular média");
+                    break;
+
+                case 3:
+                    // Sair
+                    System.out.println("Até logo!");
+                    return;
+
+                default:
+                    System.out.println("Opção inválida!");
+            }
+        }
+    }
+}
