@@ -1,0 +1,28 @@
+
+import java.util.Scanner;
+
+public class App2Matriz {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        double[][] matriz = new double[2][2];
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                System.out.print("Digite o valor para [" + i + "][" + j + "]: ");
+                matriz[i][j] = sc.nextDouble();
+            }
+        }
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                System.out.print(matriz[i][j] + " | ");
+            }
+            System.out.println();  // muda de linha após imprimir uma linha da matriz
+        }
+        for (int i = 0; i < 2; i++) {
+            double media = (matriz[i][0] + matriz[i][1]) / 2;
+            System.out.println("Média de linha " + (i + 1) + ": " + media);
+        }
+    }
+}
